@@ -1,0 +1,11 @@
+
+# Clangd
+.cache/
+.cache/**
+compile_commands.json
+
+build/
+build/**
+
+bin/
+bin/**
