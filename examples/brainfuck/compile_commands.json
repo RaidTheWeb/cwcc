@@ -1,0 +1,16 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-g",
+      "-O0",
+      "-I/tmp/include",
+      "-o",
+      "bf",
+      "src/statements.c"
+    ],
+    "directory": "/home/rtw/projects/compiler/examples/brainfuck",
+    "file": "/home/rtw/projects/compiler/examples/brainfuck/bf.c",
+    "output": "/home/rtw/projects/compiler/examples/brainfuck/bf"
+  }
+]

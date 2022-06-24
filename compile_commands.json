@@ -1,0 +1,162 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-O0",
+      "-Isrc/include",
+      "-DINCDIR=\"/tmp/include\"",
+      "-o",
+      "build/ast.o",
+      "src/ast.c"
+    ],
+    "directory": "/home/rtw/projects/compiler",
+    "file": "/home/rtw/projects/compiler/src/ast.c",
+    "output": "/home/rtw/projects/compiler/build/ast.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-O0",
+      "-Isrc/include",
+      "-DINCDIR=\"/tmp/include\"",
+      "-o",
+      "build/codegen.o",
+      "src/codegen.c"
+    ],
+    "directory": "/home/rtw/projects/compiler",
+    "file": "/home/rtw/projects/compiler/src/codegen.c",
+    "output": "/home/rtw/projects/compiler/build/codegen.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-O0",
+      "-Isrc/include",
+      "-DINCDIR=\"/tmp/include\"",
+      "-o",
+      "build/declaration.o",
+      "src/declaration.c"
+    ],
+    "directory": "/home/rtw/projects/compiler",
+    "file": "/home/rtw/projects/compiler/src/declaration.c",
+    "output": "/home/rtw/projects/compiler/build/declaration.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-O0",
+      "-Isrc/include",
+      "-DINCDIR=\"/tmp/include\"",
+      "-o",
+      "build/expression.o",
+      "src/expression.c"
+    ],
+    "directory": "/home/rtw/projects/compiler",
+    "file": "/home/rtw/projects/compiler/src/expression.c",
+    "output": "/home/rtw/projects/compiler/build/expression.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-O0",
+      "-Isrc/include",
+      "-DINCDIR=\"/tmp/include\"",
+      "-o",
+      "build/main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/rtw/projects/compiler",
+    "file": "/home/rtw/projects/compiler/src/main.c",
+    "output": "/home/rtw/projects/compiler/build/main.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-O0",
+      "-Isrc/include",
+      "-DINCDIR=\"/tmp/include\"",
+      "-o",
+      "build/misc.o",
+      "src/misc.c"
+    ],
+    "directory": "/home/rtw/projects/compiler",
+    "file": "/home/rtw/projects/compiler/src/misc.c",
+    "output": "/home/rtw/projects/compiler/build/misc.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-O0",
+      "-Isrc/include",
+      "-DINCDIR=\"/tmp/include\"",
+      "-o",
+      "build/scanner.o",
+      "src/scanner.c"
+    ],
+    "directory": "/home/rtw/projects/compiler",
+    "file": "/home/rtw/projects/compiler/src/scanner.c",
+    "output": "/home/rtw/projects/compiler/build/scanner.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-O0",
+      "-Isrc/include",
+      "-DINCDIR=\"/tmp/include\"",
+      "-o",
+      "build/statements.o",
+      "src/statements.c"
+    ],
+    "directory": "/home/rtw/projects/compiler",
+    "file": "/home/rtw/projects/compiler/src/statements.c",
+    "output": "/home/rtw/projects/compiler/build/statements.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-O0",
+      "-Isrc/include",
+      "-DINCDIR=\"/tmp/include\"",
+      "-o",
+      "build/symbols.o",
+      "src/symbols.c"
+    ],
+    "directory": "/home/rtw/projects/compiler",
+    "file": "/home/rtw/projects/compiler/src/symbols.c",
+    "output": "/home/rtw/projects/compiler/build/symbols.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-g",
+      "-O0",
+      "-Isrc/include",
+      "-DINCDIR=\"/tmp/include\"",
+      "-o",
+      "build/typing.o",
+      "src/typing.c"
+    ],
+    "directory": "/home/rtw/projects/compiler",
+    "file": "/home/rtw/projects/compiler/src/typing.c",
+    "output": "/home/rtw/projects/compiler/build/typing.o"
+  }
+]
