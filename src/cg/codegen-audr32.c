@@ -19,23 +19,6 @@
 #define FIRSTPARAMREG 13
 static int freereg[NUMFREEREGS];
 static char *reglist[] = { "r11", "r12", "r13", "r14", "r15", "r8", "r7", "r6", "r5", "r4", "r3", "r2", "r1", "r0" };
-// TODO: ------->[!!!!!!!!!!TODO!!!!!!!!!!!]<-------
-// Ensure we do not override registers (somehow) that actually contain parameter information (idk why this even happens in the first place)
-// mov	r8, 1229824
-// add	r15, r8
-// mov	r1, r15 <---- we tell it to store the result as parameter 2 (r1)
-// push	r11 <---- arguments to functions should probably be included here or something to prevent overrides
-// push	r12
-// push	r13
-// push	r14
-// push	r15
-// push	r8
-// mov	r15, 0
-// mov	r1, r15 <---- we override it as we're now calling a different function and because of that it overrides r1
-// mov	r15, 0
-// mov	r0, r15
-// call	getoffset
-
 
 static void pushreg(int r) {
     fprintf(Outfile, "\tpush\t%s\n", reglist[r]);
@@ -268,15 +251,15 @@ int cgloadvar(struct symtable *sym, int op) {
 
     if (sym->class == CLASS_LOCAL || sym->class == CLASS_PARAM) {
         switch (sym->size) {
-            case 1: fprintf(Outfile, "\tmov\t%s,[8:bp:%d]\n", reglist[r], sym->st_posn); break;
+            case 1: fprintf(Outfile, "\tmov\t%s, [8:bp:%d]\n", reglist[r], sym->st_posn); break;
             case 4: fprintf(Outfile, "\tmov\t%s, [32:bp:%d]\n", reglist[r], sym->st_posn); break;
             case 8: fprintf(Outfile, "\tmov\t%s, [32:bp:%d]\n", reglist[r], sym->st_posn);
         }
     } else {
         switch (sym->size) {
-            case 1: fprintf(Outfile, "\tmov\t%s,[8:%s]\n", reglist[r], sym->name); break;
-            case 4: fprintf(Outfile, "\tmov\t%s,[32:%s]\n", reglist[r], sym->name); break;
-            case 8: fprintf(Outfile, "\tmov\t%s,[32:%s]\n", reglist[r], sym->name);
+            case 1: fprintf(Outfile, "\tmov\t%s, [8:%s]\n", reglist[r], sym->name); break;
+            case 4: fprintf(Outfile, "\tmov\t%s, [32:%s]\n", reglist[r], sym->name); break;
+            case 8: fprintf(Outfile, "\tmov\t%s, [32:%s]\n", reglist[r], sym->name);
         }
     }
 

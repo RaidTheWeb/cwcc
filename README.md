@@ -10,6 +10,25 @@ Running `make` in the root of the repo will build audr32-cwcc and install to you
 
 Run `make clean; bear -- make` to build the `compile_commands.json` for clangd in the root of the repo.
 
+## Using
+
+### CLI Arguments
+
+- `-v` toggle verbose
+- `-S` generate assembly output only
+- `-T` dump AST tree
+- `-M` dump symbols
+- `-o out` select the output file for executable
+- `-b offset` select the base offset (relocating)
+- `-s size` base size for output binary
+- `-a file` add an assembly file to the list of files to compile against
+
+### Kernels
+
+Kernels and other binaries that require offsetting as they're loaded at different locations other than the default `0x40330000` (ROM) require compilation whilst passing in the `-b` option with a required base offset argument in hexadecimal.
+
+Example: `audr32-cwcc -b 330000 -o ramstart.bin ramstart.c` (Compile C file so that it will act like everything is loaded at 0x00330000 (RAMSTART))
+
 ## License
 
 <a href="https://opensource.org/licenses/MIT">

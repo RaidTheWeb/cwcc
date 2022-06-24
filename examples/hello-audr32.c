@@ -1,4 +1,4 @@
-#include "include/std.h"
+#include "../include/std.h"
 // #include <stdio.h>
 
 int main() {
